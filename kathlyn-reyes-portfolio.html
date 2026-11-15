@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kathlyn L. Reyes | Accountancy Graduate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F7F6; --surface:#FFFFFF; --ink:#12263A; --muted:#5B6B7A; --line:#D5DFDC; --accent:#0F766E; --accent-soft:#DCEFEB;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E1B24; --surface:#152632; --ink:#E8F0EE; --muted:#93A5AF; --line:#243A47; --accent:#5EC4B6; --accent-soft:#17353A; color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0E1B24; --surface:#152632; --ink:#E8F0EE; --muted:#93A5AF; --line:#243A47; --accent:#5EC4B6; --accent-soft:#17353A; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+nav b{font:700 18px var(--display)}
+nav div{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+.hero{position:relative;padding:72px 0 88px;
+  background-image:repeating-linear-gradient(to bottom,transparent 0 47px,var(--line) 47px 48px);
+  -webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent);mask-image:linear-gradient(to bottom,#000 70%,transparent)}
+.hero-inner{position:relative}
+.role{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:14px;padding:6px 14px;border-radius:99px;margin-bottom:22px}
+h1{font:700 clamp(44px,9vw,92px)/1 var(--display);letter-spacing:-.035em;margin:0 0 24px}
+.lead{max-width:34em;font-size:19px;color:var(--muted);margin:0 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;text-decoration:none;font-size:16px;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent);color:var(--bg)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:700 30px/1.2 var(--display);letter-spacing:-.02em;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:200px 1fr;gap:32px}
+.grid>h2{margin:0}
+.item{margin-bottom:32px}
+.item:last-child{margin-bottom:0}
+.item h3{font:600 19px/1.3 var(--body);margin:0}
+.item .meta{color:var(--muted);font-size:15px;margin:2px 0 12px}
+ul{margin:0;padding-left:20px}
+li{margin-bottom:8px}
+li::marker{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px;padding:0;list-style:none}
+.chips li{margin:0;background:var(--surface);border:1px solid var(--line);padding:8px 16px;border-radius:10px;font-size:15px;font-weight:500}
+.sub{font:600 15px var(--body);color:var(--muted);margin:0 0 12px}
+.honors{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.honor{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.honor strong{display:block;font:700 18px/1.3 var(--display)}
+.honor span{color:var(--muted);font-size:15px}
+.honor.top{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.honor.top span{color:inherit;opacity:.85}
+.sem{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.sem:first-of-type{padding-top:0}
+.sem small{display:block;color:var(--muted);font-size:14px}
+.sem time{color:var(--muted);font-size:15px;white-space:nowrap}
+.contact{background:var(--ink);color:var(--bg);border-radius:20px;padding:48px 32px;margin:64px 0}
+.contact h2{margin-bottom:12px}
+.contact p{margin:0 0 24px;opacity:.8}
+.contact a.btn{border-color:var(--bg);margin:0 8px 8px 0}
+.contact a.btn.primary{background:var(--bg);color:var(--ink)}
+footer{padding:0 0 40px;color:var(--muted);font-size:14px;text-align:center}
+.hero-inner>*{animation:rise .7s both}
+.hero-inner>*:nth-child(2){animation-delay:.08s}.hero-inner>*:nth-child(3){animation-delay:.16s}.hero-inner>*:nth-child(4){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-inner>*{animation:none}html{scroll-behavior:auto}}
+@media (max-width:720px){
+  .grid{grid-template-columns:1fr;gap:20px}
+  nav div{gap:14px;font-size:14px}
+  .hero{padding:48px 0 64px}
+  .sem{flex-direction:column;gap:2px}
+  .contact{padding:36px 22px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <b>KR</b>
+    <div><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="role">Accountancy graduate</span>
+      <h1>Kathlyn L. Reyes</h1>
+      <p class="lead">I’m a Bachelor of Science in Accountancy graduate who enjoys careful numbers, clean records, and steady growth. I’m looking for an accounting role where I can learn from mentors and contribute right away.</p>
+      <div class="btns">
+        <a class="btn primary" href="#experience">See my experience</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="grid">
+      <h2>About</h2>
+      <div>
+        <p style="margin:0 0 16px">I’m committed to contributing to an organization’s financial success by applying my academic background, analytical skills, and dedication to excellence.</p>
+        <p style="margin:0;color:var(--muted)">I graduated in 2025 from Pamantasan ng Lungsod ng San Pablo with an Academic Distinction Award, and I’m based in Tiaong, Quezon. I speak Filipino and English.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="grid">
+      <h2>Experience</h2>
+      <div>
+        <div class="item">
+          <h3>Intern, South Asialink Finance Corporation</h3>
+          <p class="meta">San Pablo City, Laguna</p>
+          <ul>
+            <li>Helped prepare amortization schedules, including accurate computation of principal payments and interest allocation.</li>
+            <li>Encoded data into internal systems, checking records for completeness and accuracy.</li>
+            <li>Supported the marketing team by creating posters and helping develop a company promotional video.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="grid">
+      <h2>Education</h2>
+      <div>
+        <div class="item">
+          <h3>Bachelor of Science in Accountancy</h3>
+          <p class="meta">Pamantasan ng Lungsod ng San Pablo, San Pablo City, Laguna &middot; 2021&ndash;2025</p>
+        </div>
+        <p class="sub">Achievements</p>
+        <div class="honors">
+          <div class="honor top"><strong>Academic Distinction Award</strong><span>College, 2025</span></div>
+          <div class="honor"><strong>Dean’s Lister</strong><span>College, 2021</span></div>
+          <div class="honor"><strong>With Honors</strong><span>Senior High School, 2019&ndash;2021</span></div>
+          <div class="honor"><strong>With Honors</strong><span>Junior High School, 2016&ndash;2017</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="grid">
+      <h2>Skills</h2>
+      <div>
+        <p class="sub">Technical</p>
+        <ul class="chips"><li>Bookkeeping</li><li>Microsoft Office</li><li>QuickBooks (basic)</li><li>Data analysis</li></ul>
+        <p class="sub">Personal</p>
+        <ul class="chips" style="margin:0"><li>Attention to detail</li><li>Adaptability</li><li>Time management</li><li>Communication</li><li>Team collaboration</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="seminars">
+    <div class="grid">
+      <h2>Seminars</h2>
+      <div>
+        <div class="sem"><div>Bookkeeping: Financial Literacy Budgeting<small>College of Accountancy Extension Program, Pamantasan ng Lungsod ng San Pablo</small></div><time>14 Nov 2024</time></div>
+        <div class="sem"><div>PICPA Career Orientation for BSA Students<small>Philippine Institute of Certified Public Accountants, Mandaluyong City</small></div><time>11 Jan 2024</time></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border:0;padding:0">
+    <div class="contact">
+      <h2>Let’s work together</h2>
+      <p>I’m open to accounting opportunities. Send me a message and I’ll get back to you.</p>
+      <a class="btn primary" href="mailto:kathlynreyes0915@gmail.com">kathlynreyes0915@gmail.com</a>
+      <a class="btn" href="tel:+639389145162">0938-914-5162</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Kathlyn L. Reyes &middot; Tiaong, Quezon</footer>
+</div>
+</body>
+</html>
